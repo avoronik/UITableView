@@ -47,7 +47,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch indexPath.row {
-        case 10...19:
+        case 0...9:
             
             let cell = UITableViewCell()
             
@@ -62,9 +62,8 @@ extension ViewController: UITableViewDataSource {
             
             return cell
             
-        case 0...9:
-            let language = language[indexPath.row]
-            let row = indexPath.row
+        case 10...19:
+            let language = language[indexPath.row - language.count]
             let cell = UITableViewCell()
             cell.textLabel?.text = language
             
